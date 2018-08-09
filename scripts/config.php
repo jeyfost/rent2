@@ -1,5 +1,5 @@
 <?php
-	$db = 'dbname';
+	$db = 'rent2';
 	$host = 'localhost';
 	$user = 'root';
 	$password = '';
