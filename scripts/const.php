@@ -10,3 +10,8 @@ define("COUNTRY_CODE", "+375");
 
 define("PHONE_CODE", "29");
 define("PHONE_NUMBER", "330-31-20");
+define("SECOND_PHONE_CODE", "29");
+define("SECOND_PHONE_NUMBER", "238-38-28");
+
+define("COMPANY_ADDRESS", "г. Могилёв, ул. Первомайская, 5/1");
+define("CONTACT_EMAIL", "palpalpal@tut.by");

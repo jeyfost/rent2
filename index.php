@@ -35,13 +35,14 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="/js/common.js"></script>
+    <script src="/js/index.js"></script>
 
     <!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
     <!-- Google Analytics counter --><!-- /Google Analytics counter -->
 </head>
 
 <body id="index">
-    <div class="menu">
+    <div class="menu transition">
         <div class="menuContainer">
             <div class="logo">
                 <a href="/"><img src="/img/system/logo.png" /></a>
@@ -81,7 +82,7 @@
                     <div class="clear"></div>
                 </div>
                 <div class="menuSeparator"></div>
-                <div class="menuPhone">
+                <div class="menuPhone" onmouseover="phoneHover(1)" onmouseout="phoneHover(0)">
                     <a class="transition" href="tel: <?= COUNTRY_CODE.PHONE_CODE.str_replace('-', '', PHONE_NUMBER) ?>"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;<span><?= COUNTRY_CODE ?> (<?= PHONE_CODE ?>) <b><?= PHONE_NUMBER ?></b></span></a>
                 </div>
                 <div class="clear"></div>
@@ -96,6 +97,109 @@
         <p>Мы предлагаеам в аренду только проверенные модели автомобилей в отличном техническом состоянии и с полным ходовым ресурсом.</p>
         <br />
         <a href="/cars"><div class="promoButton transition">Подробнее <i class="fa fa-angle-double-right" aria-hidden="true"></i></div></a>
+    </div>
+
+    <div class="section" id="start">
+        <div class="greetingsContainer">
+            <span class="headerFont">Добро пожаловать!</span>
+            <br /><br />
+            <p>
+                <?php
+                    $textResult = $mysqli->query("SELECT * FROM rent_text WHERE name = 'main'");
+                    $text = $textResult->fetch_assoc();
+
+                    echo $text['text'];
+                ?>
+            </p>
+        </div>
+    </div>
+
+    <div class="section grey text-center" id="services">
+        <span class="headerFont">Наши услуги</span>
+        <br /><br />
+        <div class="servicesContainer">
+            <div class="serviceContainer">
+                <i class="fa fa-circle yellow" aria-hidden="true"></i>&nbsp;<span>Краткосрочная/долгосрочная аренда легковых автомобилей</span>
+                <br />
+                <i class="fa fa-circle yellow" aria-hidden="true"></i>&nbsp;<span>Краткосрочная/долгосрочная аренда микроавтобусов</span>
+            </div>
+            <div class="serviceContainer">
+                <i class="fa fa-circle yellow" aria-hidden="true"></i>&nbsp;<span>Аренда квартир на сутки</span>
+                <br />
+                <i class="fa fa-circle yellow" aria-hidden="true"></i>&nbsp;<span>Аренда прицепов</span>
+                <br />
+                <i class="fa fa-circle yellow" aria-hidden="true"></i>&nbsp;<span>Прокат авто без водителя</span>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <div class="section text-center" id="advantages">
+        <span class="headerFont">С нами комфортно</span>
+        <br /><br />
+        <div class="advantagesContainer">
+            <div class="advantageContainer">
+                <img src="/img/system/1.png" />
+                <br />
+                <span class="advantageHeader">Удобный сервис</span>
+                <br />
+                <span>Легко получить<br />авто в аренду</span>
+            </div>
+            <div class="advantageContainer">
+                <img src="/img/system/2.png" />
+                <br />
+                <span class="advantageHeader">Система скидок</span>
+                <br />
+                <span>Бонусы для<br />постоянных клиентов</span>
+            </div>
+            <div class="advantageContainer">
+                <img src="/img/system/3.png" />
+                <br />
+                <span class="advantageHeader">Всегда доступны</span>
+                <br />
+                <span>Работаем для Вас<br />24/7</span>
+            </div>
+            <div class="advantageContainer">
+                <img src="/img/system/4.png" />
+                <br />
+                <span class="advantageHeader">Отличное состояние</span>
+                <br />
+                <span>Каждый автомобиль<br />своевременно проходит ТО</span>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <div class="section grey" id="map">
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A96c945bccec3c441040c28c64f0d9573d35c4a9d0d1a2778fb871a9afa423af6&amp;width=100%25&amp;height=440&amp;lang=ru_RU&amp;scroll=false"></script>
+    </div>
+
+    <div class="section ndra-container" id="footer">
+        <div class="wide">
+            <div class="footerLogo"><a href="/"><img src="/img/system/logo.png" /></a></div>
+            <div class="footerContacts">
+                <div class="footerContactsContainer">
+                    <a class="transition" href="tel: <?= COUNTRY_CODE.PHONE_CODE.str_replace('-', '', PHONE_NUMBER) ?>"><i class="fa fa-mobile" aria-hidden="true"></i>&nbsp;<?= COUNTRY_CODE." (".PHONE_CODE.") ".PHONE_NUMBER ?></a>
+                    <br />
+                    <a class="transition" href="tel: <?= COUNTRY_CODE.SECOND_PHONE_CODE.str_replace('-', '', SECOND_PHONE_NUMBER) ?>"><i class="fa fa-mobile" aria-hidden="true"></i>&nbsp;<?= COUNTRY_CODE." (".SECOND_PHONE_CODE.") ".SECOND_PHONE_NUMBER ?>&nbsp;</a>
+                </div>
+                <div class="footerContactsContainer">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;<?= COMPANY_ADDRESS ?>
+                    <br />
+                    <a class="transition" href="mailto: <?= CONTACT_EMAIL ?>"><i class="fa fa-at" aria-hidden="true"></i>&nbsp;<?= CONTACT_EMAIL ?>&nbsp;</a>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+            <br />
+        </div>
+        <div class="line"></div>
+        <div class="wide">
+            <br />
+            <div style="float: left;">Аренда &laquo;У ПАЛЫЧА&raquo; &copy; 2014 - <?= date('Y') ?></div>
+            <div style="float: right;">Создание сайта: <a href="https://airlab.by/" style="color: #cfcfcf;"><span class="maker transition">airlab</span></a></div>
+            <div class="clear"></div>
+        </div>
     </div>
 </body>
 
