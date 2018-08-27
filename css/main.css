@@ -4,15 +4,19 @@ a {text-decoration: none;}
 .promoButton:hover {background-color: #fff;}
 .footerContactsContainer a:hover {color: #ffca00;}
 .maker:hover {color: #ffca00;}
+.menuPhoneInner a:hover {color: #333;}
+.carTab a .promoButton:hover {background-color: #ffdb54;}
+.carTab a img:hover {opacity: .8;}
 
 #index {z-index: 1; background-image: url(/img/system/bg.jpg); background-position: center center; background-repeat: no-repeat; background-attachment: fixed; background-size: cover; background-color: #aca6a6;}
 #start {background-image: url(/img/system/bg2.jpg); background-position: top right; background-repeat: no-repeat; background-size: cover; background-color: #fff;}
 #map {padding: 0;}
-#footer {background-color: #2e3040; padding-bottom: 0;}
+#footer {background-color: #2e3040;}
 
 .clear {clear: both;}
 .transition {transition: .3s;}
 .menu {width: 100%; height: 90px; position: fixed; z-index: 100;}
+.menuInner {width: 100%; height: 90px; z-index: 100; background-color: #fff; box-shadow: 0 5px 6px -4px rgba(0, 0, 0, 0.3);}
 .logo, .footerLogo {float: left; margin-top: 10px;}
 .menuContainer {width: 90%; margin: 0 auto;}
 .menuContent {float: right; height: 90px;}
@@ -20,10 +24,14 @@ a {text-decoration: none;}
 .menuTopLine {height: 3px; width: 100%;}
 .menuTopLineActive {background-color: #ffca00;}
 .menuPointName {width: 100%; height: 42px; line-height: 42px; font-family: "Montserrat", sans-serif; text-align: center; color: #fff; font-style: italic; font-size: 16px;}
+.menuPointNameInner {width: 100%; height: 42px; line-height: 42px; font-family: "Montserrat", sans-serif; text-align: center; color: #333; font-style: italic; font-size: 16px;}
+.menuInner .menuPointName {width: 100%; height: 42px; line-height: 42px; font-family: "Montserrat", sans-serif; text-align: center; color: #333; font-style: italic; font-size: 16px;}
+.menuInner .menuPointActive {color: #ffca00;}
 .menuPointActive {color: #ffca00;}
 .menuSeparator {width: 100%; height: 1px; background-color: #ffca00;}
-.menuPhone {float: right; margin-right: 15px; font-family: "Montserrat", sans-serif; font-style: italic; font-size: 14px; height: 45px; line-height: 45px;}
+.menuPhone, .menuPhoneInner {float: right; margin-right: 15px; font-family: "Montserrat", sans-serif; font-style: italic; font-size: 14px; height: 45px; line-height: 45px;}
 .menuPhone a {color: #fff;}
+.menuPhoneInner a {color: #ffca00;}
 .promo {position: absolute; top: 200px; right: 5%; text-align: right; font-family: "Istok Web", sans-serif; font-style: italic; width: 400px; font-weight: normal; color: #333;}
 .promo span {font-size: 30px;}
 .promo p {font-size: 16px;}
@@ -34,6 +42,7 @@ a {text-decoration: none;}
 .greetingsContainer {margin-left: 5%; width: 500px; text-align: center; font-family: "Istok Web", sans-serif; font-size: 18px; color: #333; z-index: 2; min-height: 440px;}
 .grey {background-color: #f8f8f8;}
 .text-center {text-align: center;}
+.text-left {text-align: left;}
 .servicesContainer {width: 65%; margin: 0 auto; text-align: center;}
 .serviceContainer {width: 50%; text-align: left; font-size: 16px; font-family: "Istok Web", sans-serif; color: #333; float: left;}
 .yellow {color: #ffca00;}
@@ -47,3 +56,8 @@ a {text-decoration: none;}
 .footerContactsContainer a {color: #fff;}
 .wide div {font-family: "Istok Web", sans-serif; font-size: 14px; color: #fff;}
 .maker {color: #cfcfcf;}
+.carTab {width: 300px; padding: 10px; box-shadow: 0 5px 6px -4px rgba(0, 0, 0, 0.3); background-color: #fff; display: inline-block; vertical-align: top; margin-left: 10px; margin-top: 10px; text-align: center; font-family: "Istok Web", sans-serif; font-size: 16px; color: #333;}
+.carTabName {font-size: 18px; font-weight: bold;}
+.carTab img {margin-top: 5px; width: 300px;}
+.carTab a {color: #333;}
+.carTab .promoButton {float: none; margin: -25px auto auto auto;}
