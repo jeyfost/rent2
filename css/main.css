@@ -2,11 +2,10 @@ html, body {padding: 0; margin: 0;}
 a {text-decoration: none;}
 
 .promoButton:hover {background-color: #fff;}
-.footerContactsContainer a:hover {color: #ffca00;}
-.maker:hover {color: #ffca00;}
-.menuPhoneInner a:hover {color: #333;}
+.footerContactsContainer a:hover, .maker:hover {color: #ffca00;}
+.menuPhoneInner a:hover, .breadcrumbs a:hover {color: #333;}
 .tab a .promoButton:hover {background-color: #ffdb54;}
-.tab a img:hover {opacity: .8;}
+.tab a img:hover, .photoPreview a img:hover {opacity: .8;}
 
 #index {z-index: 1; background-image: url(/img/system/bg.jpg); background-position: center center; background-repeat: no-repeat; background-attachment: fixed; background-size: cover; background-color: #aca6a6;}
 #start {background-image: url(/img/system/bg2.jpg); background-position: top right; background-repeat: no-repeat; background-size: cover; background-color: #fff;}
@@ -61,3 +60,9 @@ a {text-decoration: none;}
 .tab img {margin-top: 5px; width: 300px;}
 .tab a {color: #333;}
 .tab .promoButton {float: none; margin: -25px auto auto auto;}
+.mainPhoto {width: 100%;}
+.photoPreview {display: inline-block; vertical-align: top; padding: 10px; width: 200px; margin-left: 10px; margin-top: 10px; background-color: #fff; box-shadow: 0 5px 6px -4px rgba(0, 0, 0, 0.3);}
+.photoPreview img {width: 200px;}
+.custom {font-family: "Istok Web", sans-serif; font-size: 16px; color: #333;}
+.breadcrumbs {background-color: #eee; color: #777; font-family: "Istok Web", sans-serif; font-size: 14px; padding: 8px;}
+.breadcrumbs a {color: #ffca00;}

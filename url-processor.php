@@ -119,6 +119,10 @@ $page = $pageResult->fetch_assoc();
                     case "category":
                         if($url[0] == "cars") {
                             echo "
+                                <div class='wide text-left breadcrumbs'>
+                                    <a href='/' class='transition'><i class='fa fa-home' aria-hidden='true'></i> Главная</a> / Автомобили
+                                </div>
+                                <br /><br />
                                 <span class='headerFont'>Легковые автомобили</span>
                                 <br /><br />
                             ";
@@ -215,6 +219,10 @@ $page = $pageResult->fetch_assoc();
 
                         if($url[0] == "apartments") {
                             echo "
+                                <div class='wide text-left breadcrumbs'>
+                                    <a href='/' class='transition'><i class='fa fa-home' aria-hidden='true'></i> Главная</a> / Квартиры
+                                </div>
+                                <br /><br />
                                 <span class='headerFont'>Квартиры</span>
                                 <br /><br />
                             ";
@@ -241,6 +249,7 @@ $page = $pageResult->fetch_assoc();
                                         <br /><br />
                                         <a href='/apartments/".$apartment['url']."'><div class='promoButton transition'>Подробнее <i class='fa fa-angle-double-right' aria-hidden='true'></i></div></a>
                                     </div>
+                                    <br /><br />
                                 ";
                             }
                         }
@@ -251,7 +260,53 @@ $page = $pageResult->fetch_assoc();
                         }
 
                         if($url[0] == "apartments") {
+                            $apartmentResult = $mysqli->query("SELECT * FROM rent_apartments WHERE url = '".$url[1]."'");
+                            $apartment = $apartmentResult->fetch_assoc();
 
+                            echo "
+                                <div class='wide text-left breadcrumbs'>
+                                    <a href='/' class='transition'><i class='fa fa-home' aria-hidden='true'></i> Главная</a> / <a href='/apartments' class='transition'>Квартиры</a> / ".$apartment['name']."
+                                </div>
+                                <br /><br />
+                                <span class='headerFont'>".$apartment['name']."</span>
+                                <br /><br />
+                                <div class='wide text-center'>
+                                    <img src='/img/apartments/big/".$apartment['photo']."' class='mainPhoto' />
+                                </div>
+                                <div class='wide text-center'>
+                                    <div class='photoPreview'>
+                                        <a href='/img/apartments/big/".$apartment['photo']."' class='strip' data-strip-group='apartment'><img src='/img/apartments/small/".$apartment['preview']."' /></a>
+                                    </div>
+                            ";
+
+                            $photoResult = $mysqli->query("SELECT * FROM rent_apartments_photos WHERE apartment_id = '".$apartment['id']."'");
+                            while($photo = $photoResult->fetch_assoc()) {
+                                echo "
+                                    <div class='photoPreview'>
+                                        <a href='/img/apartments/big/".$photo['photo']."' class='strip' data-strip-group='apartment'><img src='/img/apartments/small/".$photo['preview']."' class='transition' /></a>
+                                    </div>
+                                ";
+                            }
+
+                            echo "
+                                </div>
+                                <div class='wide custom text-left'>
+                                    <br /><br />
+                                    <b>Количество комнат:</b>&nbsp;".$apartment['rooms']."
+                                    <br />
+                                    <b>Количество спальных мест:</b>&nbsp;".$apartment['sleeping_areas']."
+                                    <br />
+                                    <b>Бытовая техника:</b>&nbsp;".$apartment['appliances']."
+                                    <br />
+                                    <b>Wi-Fi:</b>&nbsp;"; if($apartment['wifi'] == 1) {echo "есть";} else {echo "нет";} echo "
+                                    <br /><br />
+                                    <b>Цена за 1 сутки, руб:</b>&nbsp;".$apartment['price']."
+                                </div>
+                                <br /><br />
+                                <div class='wide text-center'>***</div>
+                                <br /><br />
+                                <div class='wide custom text-left'>".$apartment['text']."</div>
+                            ";
                         }
                         break;
                     default:
