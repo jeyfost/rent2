@@ -5,8 +5,8 @@ a {text-decoration: none;}
 .footerContactsContainer a:hover {color: #ffca00;}
 .maker:hover {color: #ffca00;}
 .menuPhoneInner a:hover {color: #333;}
-.carTab a .promoButton:hover {background-color: #ffdb54;}
-.carTab a img:hover {opacity: .8;}
+.tab a .promoButton:hover {background-color: #ffdb54;}
+.tab a img:hover {opacity: .8;}
 
 #index {z-index: 1; background-image: url(/img/system/bg.jpg); background-position: center center; background-repeat: no-repeat; background-attachment: fixed; background-size: cover; background-color: #aca6a6;}
 #start {background-image: url(/img/system/bg2.jpg); background-position: top right; background-repeat: no-repeat; background-size: cover; background-color: #fff;}
@@ -56,8 +56,8 @@ a {text-decoration: none;}
 .footerContactsContainer a {color: #fff;}
 .wide div {font-family: "Istok Web", sans-serif; font-size: 14px; color: #fff;}
 .maker {color: #cfcfcf;}
-.carTab {width: 300px; padding: 10px; box-shadow: 0 5px 6px -4px rgba(0, 0, 0, 0.3); background-color: #fff; display: inline-block; vertical-align: top; margin-left: 10px; margin-top: 10px; text-align: center; font-family: "Istok Web", sans-serif; font-size: 16px; color: #333;}
-.carTabName {font-size: 18px; font-weight: bold;}
-.carTab img {margin-top: 5px; width: 300px;}
-.carTab a {color: #333;}
-.carTab .promoButton {float: none; margin: -25px auto auto auto;}
+.tab {width: 300px; padding: 10px; box-shadow: 0 5px 6px -4px rgba(0, 0, 0, 0.3); background-color: #fff; display: inline-block; vertical-align: top; margin-left: 10px; margin-top: 10px; text-align: center; font-family: "Istok Web", sans-serif; font-size: 16px; color: #333;}
+.tabName {font-size: 18px; font-weight: bold;}
+.tab img {margin-top: 5px; width: 300px;}
+.tab a {color: #333;}
+.tab .promoButton {float: none; margin: -25px auto auto auto;}

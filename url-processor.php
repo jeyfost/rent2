@@ -126,8 +126,8 @@ $page = $pageResult->fetch_assoc();
                             $carResult = $mysqli->query("SELECT * FROM rent_cars WHERE car_type = '1'");
                             while($car = $carResult->fetch_assoc()) {
                                 echo "
-                                    <div class='carTab'>
-                                        <span class='carTabName'>".$car['name']."</span>
+                                    <div class='tab'>
+                                        <span class='tabName'>".$car['name']."</span>
                                         <br />
                                         <a href='/img/cars/big/".$car['photo']."' class='strip' data-strip-caption='".$car['name']."'><img src='/img/cars/small/".$car['preview']."' class='transition' /></a>
                                         <br /><br />
@@ -175,8 +175,8 @@ $page = $pageResult->fetch_assoc();
                                 $carResult = $mysqli->query("SELECT * FROM rent_cars WHERE car_type = '2'");
                                 while($car = $carResult->fetch_assoc()) {
                                     echo "
-                                        <div class='carTab'>
-                                            <span class='carTabName'>".$car['name']."</span>
+                                        <div class='tab'>
+                                            <span class='tabName'>".$car['name']."</span>
                                             <br />
                                             <a href='/img/cars/big/".$car['photo']."' class='strip' data-strip-caption='".$car['name']."'><img src='/img/cars/small/".$car['preview']."' class='transition' /></a>
                                             <br /><br />
@@ -214,10 +214,45 @@ $page = $pageResult->fetch_assoc();
                         }
 
                         if($url[0] == "apartments") {
+                            echo "
+                                <span class='headerFont'>Квартиры</span>
+                                <br /><br />
+                            ";
 
+                            $apartmentResult = $mysqli->query("SELECT * FROM rent_apartments");
+                            while($apartment = $apartmentResult->fetch_assoc()) {
+                                echo "
+                                    <div class='tab'>
+                                        <span class='tabName'>".$apartment['name']."</span>
+                                        <br />
+                                        <a href='/img/apartments/big/".$apartment['photo']."' class='strip' data-strip-caption='".$car['name']."'><img src='/img/apartments/small/".$apartment['preview']."' class='transition' /></a>
+                                        <br /><br />
+                                        <div class='text-left'>
+                                            <b>Количество комнат:</b>&nbsp;".$apartment['rooms']."
+                                            <br />
+                                            <b>Количество спальных мест:</b>&nbsp;".$apartment['sleeping_areas']."
+                                            <br />
+                                            <b>Бытовая техника:</b>&nbsp;".$apartment['appliances']."
+                                            <br />
+                                            <b>Wi-Fi:</b>&nbsp;"; if($apartment['wifi'] == 1) {echo "есть";} else {echo "нет";} echo "
+                                            <br /><br />
+                                            <b>Цена за 1 сутки, руб:</b>&nbsp;".$apartment['price']."
+                                        </div>
+                                        <br /><br />
+                                        <a href='/apartments/".$apartment['url']."'><div class='promoButton transition'>Подробнее <i class='fa fa-angle-double-right' aria-hidden='true'></i></div></a>
+                                    </div>
+                                ";
+                            }
                         }
                         break;
                     case "good":
+                        if($url[0] == "cars") {
+
+                        }
+
+                        if($url[0] == "apartments") {
+
+                        }
                         break;
                     default:
                         break;
