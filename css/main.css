@@ -4,7 +4,7 @@ a {text-decoration: none;}
 .promoButton:hover {background-color: #fff;}
 .footerContactsContainer a:hover, .maker:hover {color: #ffca00;}
 .menuPhoneInner a:hover, .breadcrumbs a:hover {color: #333;}
-.tab a .promoButton:hover {background-color: #ffdb54;}
+.tab a .promoButton:hover, .carsDescription .promoButton:hover {background-color: #ffdb54;}
 .tab a img:hover, .photoPreview a img:hover {opacity: .8;}
 
 #index {z-index: 1; background-image: url(/img/system/bg.jpg); background-position: center center; background-repeat: no-repeat; background-attachment: fixed; background-size: cover; background-color: #aca6a6;}
@@ -49,19 +49,21 @@ a {text-decoration: none;}
 .advantageContainer {width: 200px; font-family: "Istok Web", sans-serif; font-size: 16px; color: #333; float: left;}
 .advantageHeader {font-size: 18px; font-weight: bold;}
 .wide {width: 80%; margin: 0 auto;}
+.carsDescription b i {color: #777;}
 .line {width: 90%; height: 1px; margin: 0 auto; background-color: #fff;}
 .footerContacts {float: right; margin-top: 25px;}
 .footerContactsContainer {width: 50%; float: left; text-align: right; color: #fff; font-family: "Istok Web", sans-serif; font-size: 16px;}
 .footerContactsContainer a {color: #fff;}
 .wide div {font-family: "Istok Web", sans-serif; font-size: 14px; color: #fff;}
 .maker {color: #cfcfcf;}
-.tab {width: 300px; padding: 10px; box-shadow: 0 5px 6px -4px rgba(0, 0, 0, 0.3); background-color: #fff; display: inline-block; vertical-align: top; margin-left: 10px; margin-top: 10px; text-align: center; font-family: "Istok Web", sans-serif; font-size: 16px; color: #333;}
+.tab {width: 300px; padding: 10px; box-shadow: 5px 5px 6px -4px rgba(0, 0, 0, 0.3); background-color: #fff; display: inline-block; vertical-align: top; margin-left: 10px; margin-top: 10px; text-align: center; font-family: "Istok Web", sans-serif; font-size: 16px; color: #333;}
 .tabName {font-size: 18px; font-weight: bold;}
 .tab img {margin-top: 5px; width: 300px;}
 .tab a {color: #333;}
 .tab .promoButton {float: none; margin: -25px auto auto auto;}
+.carsDescription .promoButton {float: none; margin: 0 auto; width: 230px; color: #333;}
 .mainPhoto {width: 100%;}
-.photoPreview {display: inline-block; vertical-align: top; padding: 10px; width: 200px; margin-left: 10px; margin-top: 10px; background-color: #fff; box-shadow: 0 5px 6px -4px rgba(0, 0, 0, 0.3);}
+.photoPreview {display: inline-block; vertical-align: top; padding: 10px; width: 200px; margin-left: 10px; margin-top: 10px; background-color: #fff; box-shadow: 5px 5px 6px -4px rgba(0, 0, 0, 0.3);}
 .photoPreview img {width: 200px;}
 .custom {font-family: "Istok Web", sans-serif; font-size: 16px; color: #333;}
 .breadcrumbs {background-color: #eee; color: #777; font-family: "Istok Web", sans-serif; font-size: 14px; padding: 8px;}

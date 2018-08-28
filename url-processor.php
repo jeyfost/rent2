@@ -118,6 +118,9 @@ $page = $pageResult->fetch_assoc();
                 switch($type) {
                     case "category":
                         if($url[0] == "cars") {
+                            $textResult = $mysqli->query("SELECT * FROM rent_text WHERE name = 'cars'");
+                            $text = $textResult->fetch_assoc();
+
                             echo "
                                 <div class='wide text-left breadcrumbs'>
                                     <a href='/' class='transition'><i class='fa fa-home' aria-hidden='true'></i> Главная</a> / Автомобили
@@ -212,6 +215,13 @@ $page = $pageResult->fetch_assoc();
                                             <br /><br />
                                             <a href='/cars/".$car['url']."'><div class='promoButton transition'>Подробнее <i class='fa fa-angle-double-right' aria-hidden='true'></i></div></a>
                                         </div>
+                                        <br /><br /><br /><br />
+                                    ";
+
+                                    echo "
+                                        <div class='section'>
+                                            <div class='wide text-left custom'>".$text['text']."</div>
+                                        </div>
                                     ";
                                 }
                             }
@@ -256,11 +266,69 @@ $page = $pageResult->fetch_assoc();
                         break;
                     case "good":
                         if($url[0] == "cars") {
+                            $carResult = $mysqli->query("SELECT * FROM rent_cars WHERE url = '".$mysqli->real_escape_string($url[1])."'");
+                            $car = $carResult->fetch_assoc();
 
+                            echo "
+                                <div class='wide text-left breadcrumbs'>
+                                    <a href='/' class='transition'><i class='fa fa-home' aria-hidden='true'></i> Главная</a> / <a href='/cars' class='transition'>Автомобили</a> / ".$car['name']."
+                                </div>
+                                <br /><br />
+                                <span class='headerFont'>".$car['name']."</span>
+                                <br /><br />
+                                <div class='wide text-center'>
+                                    <img src='/img/cars/big/".$car['photo']."' class='mainPhoto' />
+                                </div>
+                                <div class='wide text-center'>
+                                    <div class='photoPreview'>
+                                        <a href='/img/cars/big/".$car['photo']."' class='strip' data-strip-group='apartment'><img src='/img/cars/small/".$car['preview']."' /></a>
+                                    </div>
+                            ";
+
+                            $photoResult = $mysqli->query("SELECT * FROM rent_cars_photos WHERE car_id = '".$car['id']."'");
+                            while($photo = $photoResult->fetch_assoc()) {
+                                echo "
+                                    <div class='photoPreview'>
+                                        <a href='/img/cars/big/".$photo['photo']."' class='strip' data-strip-group='apartment'><img src='/img/cars/small/".$photo['preview']."' class='transition' /></a>
+                                    </div>
+                                ";
+                            }
+
+                            echo "
+                                </div>
+                                <br /><br />
+                                <div class='wide text-center custom carsDescription'>
+                                    <b><i class='fa fa-calendar' aria-hidden='true'></i> Год выпуска:</b>&nbsp;".$car['year']."
+                                    <br />
+                                    <b><i class='fa fa-rocket' aria-hidden='true'></i> Тип двигателя:</b>&nbsp;".$car['engine']."
+                                    <br />
+                                    <b><i class='fa fa-cogs' aria-hidden='true'></i> Тип трансмиссии:</b>&nbsp;".$car['transmission']."
+                                    <br />
+                                    <b><i class='fa fa-fire' aria-hidden='true'></i> Расход:</b>&nbsp;".$car['consumption']."
+                                    <br />
+                                    <b><i class='fa fa-car' aria-hidden='true'></i> Тип кузова:</b>&nbsp;".$car['body']."
+                                    <br /><br />
+                                    <b><i class='fa fa-money' aria-hidden='true'></i> Цена за 1 час, руб:</b>&nbsp;".$car['1_hour']."
+                                    <br />
+                                    <b><i class='fa fa-money' aria-hidden='true'></i> Цена за 1 сутки, руб:</b>&nbsp;".$car['1_day']."
+                                    <br />
+                                    <b><i class='fa fa-money' aria-hidden='true'></i> Цена за 2 суток, руб:</b>&nbsp;".$car['2_days']."
+                                    <br />
+                                    <b><i class='fa fa-money' aria-hidden='true'></i> Цена за 3-10 суток, руб:</b>&nbsp;".$car['3_10_days']."
+                                    <br />
+                                    <b><i class='fa fa-money' aria-hidden='true'></i> Цена за 10-20 суток, руб:</b>&nbsp;".$car['10_20_days']."
+                                    <br />
+                                    <b><i class='fa fa-money' aria-hidden='true'></i> Цена за 20-30 суток, руб:</b>&nbsp;".$car['20_30_days']."
+                                    <br /><br />
+                                    <span>* Минимальный срок аренды: ".$car['min_term']."</span>
+                                    <br /><br />
+                                    <a href='/cars'><div class='promoButton transition'><i class='fa fa-angle-double-left' aria-hidden='true'></i> Назад к списку автомобилей</div></a>
+                                </div>
+                            ";
                         }
 
                         if($url[0] == "apartments") {
-                            $apartmentResult = $mysqli->query("SELECT * FROM rent_apartments WHERE url = '".$url[1]."'");
+                            $apartmentResult = $mysqli->query("SELECT * FROM rent_apartments WHERE url = '".$mysqli->real_escape_string($url[1])."'");
                             $apartment = $apartmentResult->fetch_assoc();
 
                             echo "
