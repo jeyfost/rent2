@@ -1,10 +1,15 @@
 html, body {padding: 0; margin: 0;}
 a {text-decoration: none;}
+label {font-family: "Istok Web", sans-serif;}
+hr {opacity: .3;}
+form {width: 100%; text-align: left;}
+form input {font-size: 14px; font-family: "Istok Web", sans-serif; width: 95%; height: 30px; padding-left: 5px; padding-right: 5px; line-height: 30px;}
+form textarea {font-size: 14px; font-family: "Montserrat", sans-serif;, width: 95%; padding: 5px; resize: none; transition: .3s;}
 
 .promoButton:hover {background-color: #fff;}
-.footerContactsContainer a:hover, .maker:hover {color: #ffca00;}
+.footerContactsContainer a:hover, .maker:hover, .column a:hover {color: #ffca00;}
 .menuPhoneInner a:hover, .breadcrumbs a:hover {color: #333;}
-.tab a .promoButton:hover, .carsDescription .promoButton:hover, .promoButtonInner:hover, .remodal-confirm:hover {background-color: #ffdb54 !important;}
+.tab a .promoButton:hover, .carsDescription .promoButton:hover, .promoButtonInner:hover, .remodal-confirm:hover, .button:hover {background-color: #ffdb54 !important;}
 .tab a img:hover, .photoPreview a img:hover {opacity: .8;}
 
 #index {z-index: 1; background-image: url(/img/system/bg.jpg); background-position: center center; background-repeat: no-repeat; background-attachment: fixed; background-size: cover; background-color: #aca6a6;}
@@ -77,3 +82,9 @@ a {text-decoration: none;}
 .remodal {font-family: "Istok Web", sans-serif;}
 .remodal-confirm {transition: .3s !important; background-color: #ffca00 !important; color: #333;}
 .notifyjs-corner, .notifyjs-wrapper {z-index: 9999999 !important;}
+.column {width: 30%; margin-left: 2%; position: relative; float: left; display: table-column; text-align: center; font-size: 16px;}
+.firstColumn {margin-left: 3%;}
+.column a {color: #333;}
+.container60 {width: 60%; margin: 50px auto auto auto;}
+.button {padding-left: 10px; padding-right: 10px; height: 40px; line-height: 40px; color: #333; background-color: #ffca00; border: none; transition: .3s; cursor: pointer; font-size: 16px; font-family: "Istok Web", sans-serif; margin: 20px auto auto auto;}
+.g-recaptcha {width: 300px; margin: 0 auto;}
