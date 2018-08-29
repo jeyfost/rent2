@@ -31,7 +31,14 @@ $page = $pageResult->fetch_assoc();
 
 ?>
 
-<html>
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+
+<html lang="ru">
+<!--<![endif]-->
 
 <head>
     <meta charset="utf-8" />
@@ -57,12 +64,25 @@ $page = $pageResult->fetch_assoc();
     <script src="/libs/strip/dist/js/strip.pkgd.min.js"></script>
     <script src="/js/common.js"></script>
 
+    <style>
+        #page-preloader {position: fixed; left: 0; top: 0; right: 0; bottom: 0; background: #fff; z-index: 100500;}
+        #page-preloader .spinner {width: 160px; height: 20px; position: absolute; left: 50%; top: 50%; background: url('/img/system/spinner.gif') no-repeat 50% 50%; margin: -80px 0 0 -10px;}
+    </style>
+
+    <script type="text/javascript">
+        $(window).on('load', function () {
+            const $preloader = $('#page-preloader'), $spinner = $preloader.find('.spinner');
+            $spinner.delay(500).fadeOut();
+            $preloader.delay(850).fadeOut();
+        });
+    </script>
+
     <!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
     <!-- Google Analytics counter --><!-- /Google Analytics counter -->
 </head>
 
 <body>
-
+    <div id="page-preloader"><span class="spinner"></span></div>
     <div class="menuInner transition">
         <div class="menuContainer">
             <div class="logo">
@@ -374,6 +394,8 @@ $page = $pageResult->fetch_assoc();
                                 <div class='wide text-center'>***</div>
                                 <br /><br />
                                 <div class='wide custom text-left'>".$apartment['text']."</div>
+                                <br /><br />
+                                <a href='/apartments'><div class='promoButton promoButtonInner transition'><i class='fa fa-angle-double-left' aria-hidden='true'></i> Назад к списку квартир</div></a>
                             ";
                         }
                         break;

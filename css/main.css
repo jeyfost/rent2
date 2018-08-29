@@ -4,7 +4,7 @@ a {text-decoration: none;}
 .promoButton:hover {background-color: #fff;}
 .footerContactsContainer a:hover, .maker:hover {color: #ffca00;}
 .menuPhoneInner a:hover, .breadcrumbs a:hover {color: #333;}
-.tab a .promoButton:hover, .carsDescription .promoButton:hover {background-color: #ffdb54;}
+.tab a .promoButton:hover, .carsDescription .promoButton:hover, .promoButtonInner:hover, .remodal-confirm:hover {background-color: #ffdb54 !important;}
 .tab a img:hover, .photoPreview a img:hover {opacity: .8;}
 
 #index {z-index: 1; background-image: url(/img/system/bg.jpg); background-position: center center; background-repeat: no-repeat; background-attachment: fixed; background-size: cover; background-color: #aca6a6;}
@@ -68,3 +68,12 @@ a {text-decoration: none;}
 .custom {font-family: "Istok Web", sans-serif; font-size: 16px; color: #333;}
 .breadcrumbs {background-color: #eee; color: #777; font-family: "Istok Web", sans-serif; font-size: 14px; padding: 8px;}
 .breadcrumbs a {color: #ffca00;}
+.promoButtonInner {float: none; margin: 0 auto; width: 210px; color: #333; cursor: pointer;}
+.reviews {width: 50%; margin: 0 auto;}
+.review {font-size: 14px;}
+.remodal input {width: 80%; padding: 5px 10px; height: 30px; border: 1px solid #a9a9a9;}
+.remodal textarea {width: 80%; padding: 5px 10px; min-height: 150px; resize: none; border: 1px solid #a9a9a9;}
+.remodal h1 {text-transform: uppercase; color: #474747; font-size: 16px;}
+.remodal {font-family: "Istok Web", sans-serif;}
+.remodal-confirm {transition: .3s !important; background-color: #ffca00 !important; color: #333;}
+.notifyjs-corner, .notifyjs-wrapper {z-index: 9999999 !important;}

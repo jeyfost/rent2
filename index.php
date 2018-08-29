@@ -37,11 +37,26 @@
     <script src="/js/common.js"></script>
     <script src="/js/index.js"></script>
 
+    <style>
+        #page-preloader {position: fixed; left: 0; top: 0; right: 0; bottom: 0; background: #fff; z-index: 100500;}
+        #page-preloader .spinner {width: 160px; height: 20px; position: absolute; left: 50%; top: 50%; background: url('/img/system/spinner.gif') no-repeat 50% 50%; margin: -80px 0 0 -10px;}
+    </style>
+
+    <script type="text/javascript">
+        $(window).on('load', function () {
+            const $preloader = $('#page-preloader'), $spinner = $preloader.find('.spinner');
+            $spinner.delay(500).fadeOut();
+            $preloader.delay(850).fadeOut();
+        });
+    </script>
+
     <!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
     <!-- Google Analytics counter --><!-- /Google Analytics counter -->
 </head>
 
 <body id="index">
+    <div id="page-preloader"><span class="spinner"></span></div>
+
         <div class="menu transition">
             <div class="menuContainer">
                 <div class="logo">
