@@ -29,6 +29,10 @@
     .footerContacts {width: 100%; float: none; margin-top: 10px;}
     .footerContactsContainer {width: 100%; text-align: center; float: none; margin-top: 10px;}
     .footerLeft, .footerRight {width: 100%; text-align: center; margin-top: 10px;}
+    .column {width: 100%; text-align: center; margin-top: 10px;}
+    .firstColumn {margin-left: 0;}
+    .container60 {width: 90%;}
+    .contactForm input, .contactForm textarea, .contactForm {width: 100%;}
 }
 
 /* Extra Small Devices, Phones */

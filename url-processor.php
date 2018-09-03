@@ -128,6 +128,7 @@ $page = $pageResult->fetch_assoc();
                 </div>
                 <div class="clear"></div>
             </div>
+            <div class="mobileMenuIcon"><i class="fa fa-bars" aria-hidden="true"></i></div>
             <div class="clear"></div>
         </div>
     </div>
