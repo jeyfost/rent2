@@ -8,6 +8,14 @@ $(window).on("load", function () {
     $("#advantages").offset({top: parseInt($("#services").height() + $("#services").offset().top + 80)});
     $("#map").offset({top: parseInt($("#advantages").height() + $("#advantages").offset().top + 80)});
     $("#footer").offset({top: parseInt($("#map").height() + $("#map").offset().top )});
+
+    const gc = parseInt($(".greetingsContainer").offset().top + $(".greetingsContainer").height());
+    const st = parseInt($("#start").offset().top + $("#start").height());
+
+    if(gc > st) {
+        console.log(11111);
+        $("#start").height(parseInt($("#start").height() + parseInt(gc - st)));
+    }
 });
 
 $(window).on("scroll", function () {

@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: jeyfost
  * Date: 03.09.2018
- * Time: 11:13
+ * Time: 11:45
  */
 
 session_start();
@@ -14,10 +14,10 @@ if($_SESSION['userID'] != 1) {
 }
 
 if(!empty($_REQUEST['id'])) {
-    $pageCheckResult = $mysqli->query("SELECT COUNT(id) FROM rent_pages WHERE id = '".$mysqli->real_escape_string($_REQUEST['id'])."'");
-    $pageCheck = $pageCheckResult->fetch_array(MYSQLI_NUM);
+    $textCheckResult = $mysqli->query("SELECT COUNT(id) FROM rent_text WHERE id = '".$mysqli->real_escape_string($_REQUEST['id'])."'");
+    $textCheck = $textCheckResult->fetch_array(MYSQLI_NUM);
 
-    if($pageCheck[0] == 0) {
+    if($textCheck[0] == 0) {
         header("Location: index.php");
     }
 }
@@ -37,7 +37,7 @@ if(!empty($_REQUEST['id'])) {
 
     <meta charset="utf-8" />
 
-    <title>Панель администрирования | Страницы</title>
+    <title>Панель администрирования | Тексты</title>
 
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -51,9 +51,10 @@ if(!empty($_REQUEST['id'])) {
     <link rel="stylesheet" href="/libs/font-awesome-4.7.0/css/font-awesome.css" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/libs/ckeditor/ckeditor.js"></script>
     <script type="text/javascript" src="/libs/notify/notify.js"></script>
     <script type="text/javascript" src="/js/admin/common.js"></script>
-    <script type="text/javascript" src="/js/admin/pages/index.js"></script>
+    <script type="text/javascript" src="/js/admin/text/index.js"></script>
 
     <style>
         #page-preloader {position: fixed; left: 0; top: 0; right: 0; bottom: 0; background: #fff; z-index: 100500;}
@@ -72,9 +73,9 @@ if(!empty($_REQUEST['id'])) {
     <!-- Google Analytics counter --><!-- /Google Analytics counter -->
 </head>
 
-<body>
+<body <?php if(!empty($_REQUEST['id'])) {echo "onload='loadText(\"".$_REQUEST['id']."\")'";} ?>>
 
-    <div id="page-preloader"><span class="spinner"></span></div>
+<div id="page-preloader"><span class="spinner"></span></div>
 
     <div id="topLine">
         <div id="logo">
@@ -87,12 +88,12 @@ if(!empty($_REQUEST['id'])) {
     </div>
     <div id="leftMenu">
         <a href="/admin/pages/">
-            <div class="menuPointActive">
+            <div class="menuPoint">
                 <i class="fa fa-file-text-o" aria-hidden="true"></i><span> Страницы</span>
             </div>
         </a>
         <a href="/admin/text/">
-            <div class="menuPoint">
+            <div class="menuPointActive">
                 <i class="fa fa-font" aria-hidden="true"></i><span> Тексты</span>
             </div>
         </a>
@@ -119,38 +120,30 @@ if(!empty($_REQUEST['id'])) {
     </div>
 
     <div id="content">
-        <span class="headerFont">Редактирование страниц</span>
+        <span class="headerFont">Редактирование текстов</span>
         <br /><br />
-        <form method="post" id="pagesForm">
-            <label for="pageSelect">Страницы:</label>
+        <form method="post" id="textForm">
+            <label for="textSelect">Текст:</label>
             <br />
-            <select id="pageSelect" name="page" onchange="window.location = '?id=' + this.options[this.selectedIndex].value">
-                <option value="">- Выберите страницу -</option>
+            <select id="textSelect" name="textSelect" onchange="window.location = '?id=' + this.options[this.selectedIndex].value">
+                <option value="">- Выберите текст -</option>
                 <?php
-                    $pageResult = $mysqli->query("SELECT * FROM rent_pages ORDER BY id");
-                    while($page = $pageResult->fetch_assoc()) {
-                        echo "<option value='".$page['id']."'"; if($_REQUEST['id'] == $page['id']) {echo " selected";} echo ">".$page['name']."</option>";
+                    $textResult = $mysqli->query("SELECT * FROM rent_text ORDER BY id");
+                    while($text = $textResult->fetch_assoc()) {
+                        echo "<option value='".$text['id']."'"; if($_REQUEST['id'] == $text['id']) {echo " selected";} echo ">".$text['name_rus']."</option>";
                     }
                 ?>
             </select>
             <?php
                 if(!empty($_REQUEST['id'])) {
-                    $pageResult = $mysqli->query("SELECT * FROM rent_pages WHERE id = '".$mysqli->real_escape_string($_REQUEST['id'])."'");
-                    $page = $pageResult->fetch_assoc();
+                    $textResult = $mysqli->query("SELECT * FROM rent_text WHERE id = '".$mysqli->real_escape_string($_REQUEST['id'])."'");
+                    $text = $textResult->fetch_assoc();
 
                     echo "
                         <br /><br />
-                        <label for='titleInput'>Заголовок (тег <b>title</b>):</label>
+                        <label for='textInput'>Текст:</label>
                         <br />
-                        <input id='titleInput' name='title' value='".$page['title']."' />
-                        <br /><br />
-                        <label for='keywordsInput'>Ключевые слова (meta-тег <b>keywords</b>):</label>
-                        <br />
-                        <textarea id='keywordsInput' name='keywords' onkeydown='textAreaHeight(this)'>".$page['keywords']."</textarea>
-                        <br /><br />
-                        <label for='descriptionInput'>Описание (meta-тег <b>description</b>):</label>
-                        <br />
-                        <textarea id='descriptionInput' name='description' onkeydown='textAreaHeight(this)'>".$page['description']."</textarea>
+                        <textarea id='textInput' name='text'></textarea>
                         <br /><br />
                         <input type='button' class='button' id='pageSubmit' value='Редактировать' onmouseover='buttonHover(\"pageSubmit\", 1)' onmouseout='buttonHover(\"pageSubmit\", 0)' onclick='edit()' />
                     ";
@@ -158,6 +151,10 @@ if(!empty($_REQUEST['id'])) {
             ?>
         </form>
     </div>
+
+    <script type="text/javascript">
+        CKEDITOR.replace("text");
+    </script>
 
 </body>
 
