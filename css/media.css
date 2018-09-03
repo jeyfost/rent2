@@ -38,7 +38,8 @@
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px) {
-
+    .tab {width: 80%;}
+    .tab img {width: 100%;}
 }
 
 
