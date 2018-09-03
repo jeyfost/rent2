@@ -69,6 +69,16 @@
 <body>
 
     <div id="page-preloader"><span class="spinner"></span></div>
+
+    <div class="mobileMenu">
+        <div class="row" id="mobileMenuClose"><i class="fa fa-times" aria-hidden="true" onclick="closeMobileMenu()"></i></div>
+        <div class="row text-center mobile">Главная</div>
+        <div class="row text-center mobile"><a href="/cars">Автомобили</a></div>
+        <div class="row text-center mobile"><a href="/apartments">Квартиры</a></div>
+        <div class="row text-center mobile mobileActive"><a href="/reviews">Отзывы</a></div>
+        <div class="row text-center mobile"><a href="/contacts">Контакты</a></div>
+    </div>
+
     <div class="menuInner transition">
         <div class="menuContainer">
             <div class="logo">
@@ -114,7 +124,7 @@
                 </div>
                 <div class="clear"></div>
             </div>
-            <div class="mobileMenuIcon"><i class="fa fa-bars" aria-hidden="true"></i></div>
+            <div class="mobileMenuIcon" onclick="showMobileMenu()"><i class="fa fa-bars" aria-hidden="true"></i></div>
             <div class="clear"></div>
         </div>
     </div>

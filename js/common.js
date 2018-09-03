@@ -40,3 +40,21 @@ function pointInnerHover(line, text, action) {
         $("#" + text).css("color", "#333");
     }
 }
+
+function closeMobileMenu() {
+    $('.mobileMenu').css("top", "-1000px");
+
+    setTimeout(function () {
+        $('.mobileMenu').css("display", "none");
+        $('.mobileMenu').css("z-index", "1");
+    }, 300);
+}
+
+function showMobileMenu() {
+    $('.mobileMenu').css("display", "block");
+
+    setTimeout(function () {
+        $('.mobileMenu').css("top", "0");
+        $('.mobileMenu').css("z-index", "202");
+    }, 1);
+}
