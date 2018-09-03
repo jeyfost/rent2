@@ -12,12 +12,28 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+    #index {background-image: url(/img/system/bg_gradient.jpg);}
+    #start {background-image: none;}
 
+    .mobileMenuIcon {display: block;}
+    .menuContent {display: none;}
+    .menu {background-color: #fff !important; box-shadow: 0 5px 6px -4px rgba(0, 0, 0, 0.3);}
+    .logo {background: url(/img/system/logo_orange.png) no-repeat center center;}
+    .logo a img {opacity: 0;}
+    .promo {text-align: center; width: 80%; right: 10%;}
+    .promoButton {float: none; margin: 0 auto;}
+    .servicesContainer, .greetingsContainer, .advantagesContainer {width: 90%;}
+    .serviceContainer {width: 100%;}
+    .advantageContainer {width: 50%; margin-top: 10px;}
+    .footerLogo {width: 100%; text-align: center; float: none;}
+    .footerContacts {width: 100%; float: none; margin-top: 10px;}
+    .footerContactsContainer {width: 100%; text-align: center; float: none; margin-top: 10px;}
+    .footerLeft, .footerRight {width: 100%; text-align: center; margin-top: 10px;}
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-
+    .advantageContainer {width: 100%; margin-top: 10px;}
 }
 
 /* Custom, iPhone Retina */

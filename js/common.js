@@ -1,5 +1,7 @@
 $(window).on("load", function () {
-	$(".footerContacts").width(parseInt($(".wide").width() - $(".footerLogo").width()));
+    if($(window).width() > 768) {
+        $(".footerContacts").width(parseInt($(".wide").width() - $(".footerLogo").width()));
+    }
 });
 
 $(window).on("scroll", function () {

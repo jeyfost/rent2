@@ -73,11 +73,11 @@ form textarea {font-size: 14px; font-family: "Montserrat", sans-serif;, width: 9
 .custom {font-family: "Istok Web", sans-serif; font-size: 16px; color: #333;}
 .breadcrumbs {background-color: #eee; color: #777; font-family: "Istok Web", sans-serif; font-size: 14px; padding: 8px;}
 .breadcrumbs a {color: #ffca00;}
-.promoButtonInner {float: none; margin: 0 auto; width: 210px; color: #333; cursor: pointer;}
+.promoButtonInner {float: none; margin: 0 auto; width: 210px; color: #333; cursor: pointer; font-family: "Istok Web", sans-serif; font-size: 14px;}
 .reviews {width: 50%; margin: 0 auto;}
 .review {font-size: 14px;}
-.remodal input {width: 80%; padding: 5px 10px; height: 30px; border: 1px solid #a9a9a9;}
-.remodal textarea {width: 80%; padding: 5px 10px; min-height: 150px; resize: none; border: 1px solid #a9a9a9;}
+.remodal input {padding: 5px 10px; height: 30px; border: 1px solid #a9a9a9;}
+.remodal textarea {padding: 5px 10px; min-height: 150px; resize: none; border: 1px solid #a9a9a9;}
 .remodal h1 {text-transform: uppercase; color: #474747; font-size: 16px;}
 .remodal {font-family: "Istok Web", sans-serif;}
 .remodal-confirm {transition: .3s !important; background-color: #ffca00 !important; color: #333;}
@@ -88,3 +88,4 @@ form textarea {font-size: 14px; font-family: "Montserrat", sans-serif;, width: 9
 .container60 {width: 60%; margin: 50px auto auto auto;}
 .button {padding-left: 10px; padding-right: 10px; height: 40px; line-height: 40px; color: #333; background-color: #ffca00; border: none; transition: .3s; cursor: pointer; font-size: 16px; font-family: "Istok Web", sans-serif; margin: 20px auto auto auto;}
 .g-recaptcha {width: 300px; margin: 0 auto;}
+.mobileMenuIcon {display: none; color: #ffca00; float: right; font-size: 24px; margin-top: 33px; cursor: pointer;}

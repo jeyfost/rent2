@@ -1,3 +1,8 @@
+$(window).on("load", function () {
+    $(".remodal input").width(parseInt($(".remodal").width() - 20));
+    $(".remodal textarea").width(parseInt($(".remodal").width() - 20));
+});
+
 function sendReview() {
     const inst = $('[data-remodal-id=modal]').remodal();
 

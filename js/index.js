@@ -11,32 +11,34 @@ $(window).on("load", function () {
 });
 
 $(window).on("scroll", function () {
-    if($(window).scrollTop() > 10) {
-        $(".menu").attr("name", "white");
+    if($(window).width() >= 768) {
+        if($(window).scrollTop() > 10) {
+            $(".menu").attr("name", "white");
 
-        $(".menu").css("background-color", "#fff");
-        $(".menu").css("box-shadow", "0 5px 6px -4px rgba(0, 0, 0, 0.3)");
-        $(".logo a img").attr("src", "/img/system/logo_orange.png");
-        $(".menuPhone a").css("color", "#333");
+            $(".menu").css("background-color", "#fff");
+            $(".menu").css("box-shadow", "0 5px 6px -4px rgba(0, 0, 0, 0.3)");
+            $(".logo a img").attr("src", "/img/system/logo_orange.png");
+            $(".menuPhone a").css("color", "#333");
 
-        $("#mainPointName").css("color", "#333");
-        $("#carsPointName").css("color", "#333");
-        $("#apartmentsPointName").css("color", "#333");
-        $("#reviewsPointName").css("color", "#333");
-        $("#contactsPointName").css("color", "#333");
-    } else {
-        $(".menu").attr("name", "");
+            $("#mainPointName").css("color", "#333");
+            $("#carsPointName").css("color", "#333");
+            $("#apartmentsPointName").css("color", "#333");
+            $("#reviewsPointName").css("color", "#333");
+            $("#contactsPointName").css("color", "#333");
+        } else {
+            $(".menu").attr("name", "");
 
-        $(".menu").css("background-color", "transparent");
-        $(".menu").css("box-shadow", "none");
-        $(".logo a img").attr("src", "/img/system/logo.png");
-        $(".menuPhone a").css("color", "#fff");
+            $(".menu").css("background-color", "transparent");
+            $(".menu").css("box-shadow", "none");
+            $(".logo a img").attr("src", "/img/system/logo.png");
+            $(".menuPhone a").css("color", "#fff");
 
-        $("#mainPointName").css("color", "#fff");
-        $("#carsPointName").css("color", "#fff");
-        $("#apartmentsPointName").css("color", "#fff");
-        $("#reviewsPointName").css("color", "#fff");
-        $("#contactsPointName").css("color", "#fff");
+            $("#mainPointName").css("color", "#fff");
+            $("#carsPointName").css("color", "#fff");
+            $("#apartmentsPointName").css("color", "#fff");
+            $("#reviewsPointName").css("color", "#fff");
+            $("#contactsPointName").css("color", "#fff");
+        }
     }
 });
 
