@@ -110,7 +110,7 @@ if($_SESSION['userID'] != 1) {
 </div>
 
     <div id="content">
-        <span class="headerFont">Изменение логина и пароля администратора </span>
+        <span class="headerFont">Изменение логина и пароля администратора</span>
         <br /><br />
         <form method="post" id="securityForm">
             <label for="oldLoginInput">Старый логин:</label>

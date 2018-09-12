@@ -246,15 +246,15 @@ $page = $pageResult->fetch_assoc();
                                             <br /><br />
                                             <a href='/cars/".$car['url']."'><div class='promoButton transition'>Подробнее <i class='fa fa-angle-double-right' aria-hidden='true'></i></div></a>
                                         </div>
-                                        <br /><br /><br /><br />
-                                    ";
-
-                                    echo "
-                                        <div class='section'>
-                                            <div class='wide text-left custom'>".$text['text']."</div>
-                                        </div>
                                     ";
                                 }
+
+                                echo "
+                                    <br /><br /><br /><br />
+                                    <div class='section'>
+                                        <div class='wide text-left custom'>".$text['text']."</div>
+                                    </div>
+                                ";
                             }
                         }
 
@@ -353,6 +353,13 @@ $page = $pageResult->fetch_assoc();
                                     <br /><br />
                                     <span>* Минимальный срок аренды: ".$car['min_term']."</span>
                                     <br /><br />
+                            ";
+
+                            if($car['car_type'] == 2) {
+                                echo "<div class='text-left' style='color: #333; font-family: \"Istok Web\", sans-serif; font-size: 16px;'>".$car['description']."</div><br /><br />";
+                            }
+
+                            echo "
                                     <a href='/cars'><div class='promoButton transition'><i class='fa fa-angle-double-left' aria-hidden='true'></i> Назад к списку автомобилей</div></a>
                                 </div>
                             ";
