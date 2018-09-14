@@ -99,9 +99,6 @@ function addCar() {
                                                                                         $.notify(response, "warn");
                                                                                         break;
                                                                                 }
-                                                                            },
-                                                                            error: function (jqXHR, exception) {
-                                                                                console.log(jqXHR);
                                                                             }
                                                                         });
                                                                     } else {

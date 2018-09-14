@@ -157,7 +157,7 @@ if(!empty($_REQUEST['id'])) {
                         <br /><br />
                         <input type='file' class='file' id='previewInput' name='preview' />
                         <br /><br />
-                        <label for='additionalPhotosInput'>Дополнительный фотографии (не обязательно):</label>
+                        <label for='additionalPhotosInput'>Дополнительные фотографии (не обязательно):</label>
                         ";
 
                     $carPhotoResult = $mysqli->query("SELECT * FROM rent_cars_photos WHERE car_id = '".$car['id']."'");
