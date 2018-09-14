@@ -1,8 +1,3 @@
-$(window).on("load", function () {
-    $(".remodal input").width(parseInt($(".remodal").width() - 20));
-    $(".remodal textarea").width(parseInt($(".remodal").width() - 20));
-});
-
 function sendReview() {
     const inst = $('[data-remodal-id=modal]').remodal();
 
@@ -61,3 +56,12 @@ function sendReview() {
         $.notify("Вы не ввели имя", "error");
     }
 }
+
+$(function() {
+    const f = function () {
+        $(".remodal form input").width(parseInt($(".remodal form").width() - 20));
+        $(".remodal form textarea").width(parseInt($(".remodal form").width() - 20));
+    };
+
+    setInterval(f, 1000);
+});
