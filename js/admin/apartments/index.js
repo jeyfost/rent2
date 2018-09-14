@@ -77,7 +77,7 @@ function editApartment() {
                                             contentType: false,
                                             url: "/scripts/admin/apartments/ajaxEditApartment.php",
                                             beforeSend: function () {
-                                                $.notify("Квартира добавляется...", "info");
+                                                $.notify("Информация о квартире обновляется...", "info");
                                             },
                                             success: function (response) {
                                                 switch(response) {

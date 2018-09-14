@@ -195,7 +195,7 @@ if(!empty($_REQUEST['id'])) {
                     <br /><br />
                     <label for='wifiInput'>Наличие Wi-Fi (1 = есть; 0 = нет):</label>
                     <br />
-                    <input id='wifiInput' name='wifi' value='".$apartment['wifi']."' />
+                    <input type='number' min='0' max='1' step='1' id='wifiInput' name='wifi' value='".$apartment['wifi']."' />
                     <br /><br />
                     <label for='priceInput'>Цена аренды за 1 сутки, руб.:</label>
                     <br />

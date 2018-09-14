@@ -312,7 +312,6 @@ $page = $pageResult->fetch_assoc();
                                         <br /><br />
                                         <a href='/apartments/".$apartment['url']."'><div class='promoButton transition'>Подробнее <i class='fa fa-angle-double-right' aria-hidden='true'></i></div></a>
                                     </div>
-                                    <br /><br />
                                 ";
                             }
                         }

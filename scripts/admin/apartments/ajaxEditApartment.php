@@ -34,13 +34,13 @@ if($urlCheck[0] == 0) {
             $previewTmpName = $_FILES['preview']['tmp_name'];
             $previewName = randomName($previewTmpName);
             $previewDBName = $previewName.".".substr($_FILES['preview']['name'], count($_FILES['preview']['name']) - 4, 4);
-            $previewUploadDir = "../../../img/cars/small/";
+            $previewUploadDir = "../../../img/apartments/small/";
             $previewUpload = $previewUploadDir.$previewDBName;
 
             $photoTmpName = $_FILES['preview']['tmp_name'];
             $photoName = randomName($photoTmpName);
             $photoDBName = $photoName.".".substr($_FILES['preview']['name'], count($_FILES['preview']['name']) - 4, 4);
-            $photoUploadDir = "../../../img/cars/big/";
+            $photoUploadDir = "../../../img/apartments/big/";
             $photoUpload = $photoUploadDir.$photoDBName;
 
             if($mysqli->query("UPDATE rent_apartments SET preview = '".$previewDBName."', photo = '".$photoDBName."' WHERE id = '".$id."'")) {
