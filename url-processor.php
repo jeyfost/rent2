@@ -20,6 +20,28 @@ if($url[0] != "cars" and $url[0] != "apartments") {
     header("Location: /");
 }
 
+if($url[0] == "cars") {
+    if(!empty($url[1])) {
+        $pageCheckResult = $mysqli->query("SELECT COUNT(id) FROM rent_cars WHERE url = '".$mysqli->real_escape_string($url[1])."'");
+        $pageCheck = $pageCheckResult->fetch_array(MYSQLI_NUM);
+
+        if($pageCheck[0] == 0) {
+            header("Location: /cars");
+        }
+    }
+}
+
+if($url[0] == "apartments") {
+    if(!empty($url[1])) {
+        $pageCheckResult = $mysqli->query("SELECT COUNT(id) FROM rent_apartments WHERE url = '".$mysqli->real_escape_string($url[1])."'");
+        $pageCheck = $pageCheckResult->fetch_array(MYSQLI_NUM);
+
+        if($pageCheck[0] == 0) {
+            header("Location: /apartments");
+        }
+    }
+}
+
 if(!empty($url[1])) {
     $type = "good";
 } else {
