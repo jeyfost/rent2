@@ -338,6 +338,16 @@ $page = $pageResult->fetch_assoc();
                                     <b><i class='fa fa-fire' aria-hidden='true'></i> Расход:</b>&nbsp;".$car['consumption']."
                                     <br />
                                     <b><i class='fa fa-car' aria-hidden='true'></i> Тип кузова:</b>&nbsp;".$car['body']."
+                            ";
+
+                            if($car['car_type'] == 2) {
+                                echo "
+                                    <br />
+                                    <b><i class='fa fa-users' aria-hidden='true'></i> Количество мест:</b>&nbsp;".$car['places']."
+                                ";
+                            }
+
+                            echo "
                                     <br /><br />
                                     <b><i class='fa fa-money' aria-hidden='true'></i> Цена за 1 час, руб:</b>&nbsp;".$car['1_hour']."
                                     <br />

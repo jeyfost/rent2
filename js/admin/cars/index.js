@@ -228,6 +228,7 @@ function deleteCar() {
                         break;
                     default:
                         $.notify(response, "warn");
+                        console.log(response);
                         break;
                 }
             }

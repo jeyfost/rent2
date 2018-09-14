@@ -27,7 +27,7 @@ $days_2 = $mysqli->real_escape_string($_POST['2_days']);
 $days_3_10 = $mysqli->real_escape_string($_POST['3_10_days']);
 $days_10_20 = $mysqli->real_escape_string($_POST['10_20_days']);
 $days_20_30 = $mysqli->real_escape_string($_POST['20_30_days']);
-$min_term = $mysqli->real_escape_string($_POST['min_term']);
+$min_term = $mysqli->real_escape_string($_POST['minTerm']);
 
 if($type == 2) {
     $places = $mysqli->real_escape_string($_POST['places']);

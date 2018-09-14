@@ -20,6 +20,7 @@ textarea {width: 300px; padding: 10px; min-height: 20px; font-style: italic; bor
 #leftMenu {background-color: #fff; width: 220px; display: inline-block; box-shadow: 0 5px 15px -4px rgba(0, 0, 0, 0.4);}
 #content {display: inline-block; background-color: #fff; padding: 20px; box-shadow: 0 5px 15px -4px rgba(0, 0, 0, 0.4); vertical-align: top; margin: 40px auto auto 40px;}
 #showForm input {width: 20px; position: absolute; margin-left: 100px; top: -8px;}
+#placesInputContainer, #textInputContainer {display: none;}
 
 .button {height: 30px; width: auto; border: none; background-color: #dedede; color: #4c4c4c; font-family: Calibri, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; cursor: pointer; padding: auto 5px; transition: .3s; margin: 0 auto;}
 .clear {clear: both;}
