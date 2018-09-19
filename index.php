@@ -50,7 +50,35 @@
         });
     </script>
 
-    <!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter46912047 = new Ya.Metrika({
+                        id:46912047,
+                        clickmap:true,
+                        trackLinks:true,
+                        accurateTrackBounce:true,
+                        webvisor:true
+                    });
+                } catch(e) { }
+            });
+
+            var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else { f(); }
+        })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/46912047" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
     <!-- Google Analytics counter --><!-- /Google Analytics counter -->
 </head>
 
@@ -119,7 +147,7 @@
         <div class="promo">
             <span>Аренда автомобилей в Могилёве</span>
             <br /><br />
-            <p>Мы предлагаеам в аренду только проверенные модели автомобилей в отличном техническом состоянии и с полным ходовым ресурсом.</p>
+            <p>Мы предлагаем в аренду только проверенные модели автомобилей в отличном техническом состоянии и с минимальным расходом<br />топлива в своём классе.</p>
             <br />
             <a href="/cars"><div class="promoButton transition">Подробнее <i class="fa fa-angle-double-right" aria-hidden="true"></i></div></a>
         </div>
@@ -144,6 +172,7 @@
             <br /><br />
             <div class="servicesContainer">
                 <div class="serviceContainer">
+                    <!--
                     <i class="fa fa-circle yellow" aria-hidden="true"></i>&nbsp;<span>Краткосрочная/долгосрочная аренда легковых автомобилей</span>
                     <br />
                     <i class="fa fa-circle yellow" aria-hidden="true"></i>&nbsp;<span>Краткосрочная/долгосрочная аренда микроавтобусов</span>
@@ -154,6 +183,17 @@
                     <i class="fa fa-circle yellow" aria-hidden="true"></i>&nbsp;<span>Аренда прицепов</span>
                     <br />
                     <i class="fa fa-circle yellow" aria-hidden="true"></i>&nbsp;<span>Прокат авто без водителя</span>
+                    -->
+                    <i class="fa fa-circle yellow" aria-hidden="true"></i>&nbsp;<span>Прокат автомобилей без водителя</span>
+                    <br />
+                    <i class="fa fa-circle yellow" aria-hidden="true"></i>&nbsp;<span>Краткосрочная/долгосрочная аренда легковых автомобилей</span>
+                    <br />
+                    <i class="fa fa-circle yellow" aria-hidden="true"></i>&nbsp;<span>Краткосрочная/долгосрочная аренда микроавтобусов</span>
+                </div>
+                <div class="serviceContainer">
+                    <i class="fa fa-circle yellow" aria-hidden="true"></i>&nbsp;<span>Аренда прицепов</span>
+                    <br />
+                    <i class="fa fa-circle yellow" aria-hidden="true"></i>&nbsp;<span>Аренда квартир на сутки</span>
                 </div>
                 <div class="clear"></div>
             </div>
