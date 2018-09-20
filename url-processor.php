@@ -324,7 +324,7 @@ $page = $pageResult->fetch_assoc();
                                     <div class='tab'>
                                         <span class='tabName'>".$apartment['name']."</span>
                                         <br />
-                                        <a href='/img/apartments/big/".$apartment['photo']."' class='strip' data-strip-caption='".$car['name']."'><img src='/img/apartments/small/".$apartment['preview']."' class='transition' /></a>
+                                        <a href='/img/apartments/big/".$apartment['photo']."' class='strip' data-strip-caption='".$apartment['name']."'><img src='/img/apartments/small/".$apartment['preview']."' class='transition' /></a>
                                         <br /><br />
                                         <div class='text-left'>
                                             <b>Количество комнат:</b>&nbsp;".$apartment['rooms']."

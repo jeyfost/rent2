@@ -1,5 +1,6 @@
 RewriteEngine on
-Options +FollowSymlinks
+AddDefaultCharset utf-8
+Options +SymLinksIfOwnerMatch
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.*) url-processor.php?%{QUERY_STRING}
