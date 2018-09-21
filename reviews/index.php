@@ -100,7 +100,7 @@
 
     <div class="mobileMenu">
         <div class="row" id="mobileMenuClose"><i class="fa fa-times" aria-hidden="true" onclick="closeMobileMenu()"></i></div>
-        <div class="row text-center mobile">Главная</div>
+        <a href="/"><div class="row text-center mobile">Главная</div></a>
         <div class="row text-center mobile"><a href="/cars">Автомобили</a></div>
         <div class="row text-center mobile"><a href="/apartments">Квартиры</a></div>
         <div class="row text-center mobile mobileActive"><a href="/reviews">Отзывы</a></div>
@@ -191,8 +191,14 @@
                     }
                 ?>
             </div>
-            <br />
-            <a data-remodal-target='modal'><div class="promoButton promoButtonInner transition" style="width: 130px;">Оставить отзыв</div></a>
+            <?php
+                if($reviewCount[0] > 0) {
+                    echo "
+                        <br />
+                        <a data-remodal-target='modal'><div class='promoButton promoButtonInner transition' style='width: 130px;'>Оставить отзыв</div></a>
+                    ";
+                }
+            ?>
         </div>
     </div>
 

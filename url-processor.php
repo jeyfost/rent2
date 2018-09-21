@@ -136,7 +136,7 @@ $page = $pageResult->fetch_assoc();
 
     <div class="mobileMenu">
         <div class="row" id="mobileMenuClose"><i class="fa fa-times" aria-hidden="true" onclick="closeMobileMenu()"></i></div>
-        <div class="row text-center mobile">Главная</div>
+        <a href="/"><div class="row text-center mobile">Главная</div></a>
         <div class="row text-center mobile <?php if($url[0] == "cars") {echo "mobileActive";} ?>"><a href="/cars">Автомобили</a></div>
         <div class="row text-center mobile <?php if($url[0] == "apartments") {echo "mobileActive";} ?>"><a href="/apartments">Квартиры</a></div>
         <div class="row text-center mobile"><a href="/reviews">Отзывы</a></div>

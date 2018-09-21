@@ -98,7 +98,7 @@
 
     <div class="mobileMenu">
         <div class="row" id="mobileMenuClose"><i class="fa fa-times" aria-hidden="true" onclick="closeMobileMenu()"></i></div>
-        <div class="row text-center mobile">Главная</div>
+        <a href="/"><div class="row text-center mobile">Главная</div></a>
         <div class="row text-center mobile"><a href="/cars">Автомобили</a></div>
         <div class="row text-center mobile"><a href="/apartments">Квартиры</a></div>
         <div class="row text-center mobile"><a href="/reviews">Отзывы</a></div>
