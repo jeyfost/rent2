@@ -194,7 +194,7 @@ if($_SESSION['userID'] != 1) {
         <br /><br />
         <label for='minTermInput'>Минимальный срок аренды</label>
         <br />
-        <input id='10_20_daysInput' name='10_20_days' />
+        <input id='minTermInput' name='minTermInput' />
         <br /><br />
         <div id="textInputContainer">
             <label for='textInput'>Краткое описание:</label>

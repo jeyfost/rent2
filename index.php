@@ -172,18 +172,6 @@
             <br /><br />
             <div class="servicesContainer">
                 <div class="serviceContainer">
-                    <!--
-                    <i class="fa fa-circle yellow" aria-hidden="true"></i>&nbsp;<span>Краткосрочная/долгосрочная аренда легковых автомобилей</span>
-                    <br />
-                    <i class="fa fa-circle yellow" aria-hidden="true"></i>&nbsp;<span>Краткосрочная/долгосрочная аренда микроавтобусов</span>
-                </div>
-                <div class="serviceContainer">
-                    <i class="fa fa-circle yellow" aria-hidden="true"></i>&nbsp;<span>Аренда квартир на сутки</span>
-                    <br />
-                    <i class="fa fa-circle yellow" aria-hidden="true"></i>&nbsp;<span>Аренда прицепов</span>
-                    <br />
-                    <i class="fa fa-circle yellow" aria-hidden="true"></i>&nbsp;<span>Прокат авто без водителя</span>
-                    -->
                     <i class="fa fa-circle yellow" aria-hidden="true"></i>&nbsp;<span>Прокат автомобилей без водителя</span>
                     <br />
                     <i class="fa fa-circle yellow" aria-hidden="true"></i>&nbsp;<span>Краткосрочная/долгосрочная аренда легковых автомобилей</span>

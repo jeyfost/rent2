@@ -254,7 +254,7 @@ if(!empty($_REQUEST['id'])) {
                             <br /><br />
                             <label for='minTermInput'>Минимальный срок аренды</label>
                             <br />
-                            <input id='minTermInput' name='minTerm' value='".$car['10_20_days']."' />
+                            <input id='minTermInput' name='minTerm' value='".$car['min_term']."' />
                             <br /><br />
                         ";
 
