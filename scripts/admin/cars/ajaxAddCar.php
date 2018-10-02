@@ -26,6 +26,11 @@ $days_2 = $mysqli->real_escape_string($_POST['2_days']);
 $days_3_10 = $mysqli->real_escape_string($_POST['3_10_days']);
 $days_10_20 = $mysqli->real_escape_string($_POST['10_20_days']);
 $days_20_30 = $mysqli->real_escape_string($_POST['20_30_days']);
+$max_day_1 = $mysqli->real_escape_string($_POST['max_1_day']);
+$max_days_2 = $mysqli->real_escape_string($_POST['max_2_days']);
+$max_days_3_10 = $mysqli->real_escape_string($_POST['max_3_10_days']);
+$max_days_10_20 = $mysqli->real_escape_string($_POST['max_10_20_days']);
+$max_days_20_30 = $mysqli->real_escape_string($_POST['max_20_30_days']);
 $min_term = $mysqli->real_escape_string($_POST['minTerm']);
 
 if($type == 2) {
@@ -107,7 +112,7 @@ if($urlCheck[0] == 0) {
                 $photoUploadDir = "../../../img/cars/big/";
                 $photoUpload = $photoUploadDir.$photoDBName;
 
-                if($mysqli->query("INSERT INTO rent_cars (id, car_type, name, year, engine, consumption, transmission, body, places, description, 1_hour, 1_day, 2_days, 3_10_days, 10_20_days, 20_30_days, min_term, preview, photo, url) VALUES ('".$id."', '".$type."', '".$name."', '".$year."', '".$engine."', '".$consumption."', '".$transmission."', '".$body."', '".$places."', '".$description."', '".$hour_1."', '".$day_1."', '".$days_2."', '".$days_3_10."', '".$days_10_20."', '".$days_20_30."', '".$min_term."', '".$previewDBName."', '".$photoDBName."', '".$url."')")) {
+                if($mysqli->query("INSERT INTO rent_cars (id, car_type, name, year, engine, consumption, transmission, body, places, description, 1_hour, 1_day, 2_days, 3_10_days, 10_20_days, 20_30_days, max_1_day, max_2_days, max_3_10_days, max_10_20_days, max_20_30_days, min_term, preview, photo, url) VALUES ('".$id."', '".$type."', '".$name."', '".$year."', '".$engine."', '".$consumption."', '".$transmission."', '".$body."', '".$places."', '".$description."', '".$hour_1."', '".$day_1."', '".$days_2."', '".$days_3_10."', '".$days_10_20."', '".$days_20_30."', '".$max_day_1."', '".$max_days_2."', '".$max_days_3_10."', '".$max_days_10_20."', '".$max_days_20_30."', '".$min_term."', '".$previewDBName."', '".$photoDBName."', '".$url."')")) {
                     copy($photoTmpName, $photoUpload);
 
                     resize($previewTmpName, 200);

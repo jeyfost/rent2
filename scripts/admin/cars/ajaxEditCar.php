@@ -27,6 +27,11 @@ $days_2 = $mysqli->real_escape_string($_POST['2_days']);
 $days_3_10 = $mysqli->real_escape_string($_POST['3_10_days']);
 $days_10_20 = $mysqli->real_escape_string($_POST['10_20_days']);
 $days_20_30 = $mysqli->real_escape_string($_POST['20_30_days']);
+$max_day_1 = $mysqli->real_escape_string($_POST['max_1_day']);
+$max_days_2 = $mysqli->real_escape_string($_POST['max_2_days']);
+$max_days_3_10 = $mysqli->real_escape_string($_POST['max_3_10_days']);
+$max_days_10_20 = $mysqli->real_escape_string($_POST['max_10_20_days']);
+$max_days_20_30 = $mysqli->real_escape_string($_POST['max_20_30_days']);
 $min_term = $mysqli->real_escape_string($_POST['minTerm']);
 
 if($type == 2) {
@@ -151,7 +156,7 @@ if($urlCheck[0] == 0) {
         exit;
     }
 
-    if($mysqli->query("UPDATE rent_cars SET car_type = '".$type."', name = '".$name."', year = '".$year."', engine = '".$engine."', consumption = '".$consumption."', transmission = '".$transmission."', body = '".$body."', places = '".$places."', description = '".$description."', 1_hour = '".$hour_1."', 1_day = '".$day_1."', 2_days = '".$days_2."', 3_10_days = '".$days_3_10."', 10_20_days = '".$days_10_20."', 20_30_days = '".$days_20_30."', min_term = '".$min_term."', url = '".$url."' WHERE id = '".$id."'")) {
+    if($mysqli->query("UPDATE rent_cars SET car_type = '".$type."', name = '".$name."', year = '".$year."', engine = '".$engine."', consumption = '".$consumption."', transmission = '".$transmission."', body = '".$body."', places = '".$places."', description = '".$description."', 1_hour = '".$hour_1."', 1_day = '".$day_1."', 2_days = '".$days_2."', 3_10_days = '".$days_3_10."', 10_20_days = '".$days_10_20."', 20_30_days = '".$days_20_30."', max_1_day = '".$max_day_1."', max_2_days = '".$max_days_2."', max_3_10_days = '".$max_days_3_10."', max_10_20_days = '".$max_days_10_20."', max_20_30_days = '".$max_days_20_30."', min_term = '".$min_term."', url = '".$url."' WHERE id = '".$id."'")) {
         echo "ok";
     } else {
         echo "failed";

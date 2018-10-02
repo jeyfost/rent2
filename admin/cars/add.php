@@ -171,7 +171,8 @@ if($_SESSION['userID'] != 1) {
         <label for='1_hourInput'>Цена за 1 час, руб.</label>
         <br />
         <input id='1_hourInput' name='1_hour' />
-        <br /><br />
+        <br /><br /><hr />
+        <h3>Цена за 250 км</h3>
         <label for='1_dayInput'>Цена за 1 день, руб.</label>
         <br />
         <input id='1_dayInput' name='1_day' />
@@ -191,7 +192,28 @@ if($_SESSION['userID'] != 1) {
         <label for='20_30_daysInput'>Цена за 20-30 дней, руб.</label>
         <br />
         <input id='20_30_daysInput' name='20_30_days' />
+        <br /><br /><hr />
+        <h3>Цена за 500 км</h3>
+        <label for='max_1_dayInput'>Цена за 1 день, руб.</label>
+        <br />
+        <input id='max_1_dayInput' name='max_1_day' />
         <br /><br />
+        <label for='max_2_daysInput'>Цена за 2 дня, руб.</label>
+        <br />
+        <input id='max_2_daysInput' name='max_2_days' />
+        <br /><br />
+        <label for='max_3_10_daysInput'>Цена за 3-10 дней, руб.</label>
+        <br />
+        <input id='max_3_10_daysInput' name='max_3_10_days' />
+        <br /><br />
+        <label for='max_10_20_daysInput'>Цена за 10-20 дней, руб.</label>
+        <br />
+        <input id='max_10_20_daysInput' name='max_10_20_days' />
+        <br /><br />
+        <label for='max_20_30_daysInput'>Цена за 20-30 дней, руб.</label>
+        <br />
+        <input id='max_20_30_daysInput' name='max_20_30_days' />
+        <br /><br /><hr />
         <label for='minTermInput'>Минимальный срок аренды</label>
         <br />
         <input id='minTermInput' name='minTermInput' />

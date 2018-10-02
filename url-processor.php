@@ -232,17 +232,44 @@ $page = $pageResult->fetch_assoc();
                                             <br /><br />
                                             <b>Цена за 1 час, руб:</b>&nbsp;".$car['1_hour']."
                                             <br />
-                                            <b>Цена за 1 сутки, руб:</b>&nbsp;".$car['1_day']."
-                                            <br />
-                                            <b>Цена за 2 суток, руб:</b>&nbsp;".$car['2_days']."
-                                            <br />
-                                            <b>Цена за 3-10 суток, руб:</b>&nbsp;".$car['3_10_days']."
-                                            <br />
-                                            <b>Цена за 10-20 суток, руб:</b>&nbsp;".$car['10_20_days']."
-                                            <br />
-                                            <b>Цена за 20-30 суток, руб:</b>&nbsp;".$car['20_30_days']."
-                                            <br /><br />
                                             <span>* Минимальный срок аренды: ".$car['min_term']."</span>
+                                            <br /><br />
+                                            <table>
+                                                <thead class='bold td-grey'>
+                                                    <tr>
+                                                        <td>Срок</td>
+                                                        <td>Цена за 250 км/сутки, руб</td>
+                                                        <td>Цена за 500 км/сутки, руб</td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class='bold td-grey'>1 сутки</td>
+                                                        <td>".$car['1_day']."</td>
+                                                        <td>".$car['max_1_day']."</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class='bold td-grey'>2 сутки</td>
+                                                        <td>".$car['2_days']."</td>
+                                                        <td>".$car['max_2_days']."</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class='bold td-grey'>3-10 суток</td>
+                                                        <td>".$car['3_10_days']."</td>
+                                                        <td>".$car['max_3_10_days']."</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class='bold td-grey'>10-20 суток</td>
+                                                        <td>".$car['10_20_days']."</td>
+                                                        <td>".$car['max_10_20_days']."</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class='bold td-grey'>20-30 суток</td>
+                                                        <td>".$car['20_30_days']."</td>
+                                                        <td>".$car['max_20_30_days']."</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                         <br /><br />
                                         <a href='/cars/".$car['url']."'><div class='promoButton transition'>Подробнее <i class='fa fa-angle-double-right' aria-hidden='true'></i></div></a>
@@ -281,17 +308,44 @@ $page = $pageResult->fetch_assoc();
                                                 <br /><br />
                                                 <b>Цена за 1 час, руб:</b>&nbsp;".$car['1_hour']."
                                                 <br />
-                                                <b>Цена за 1 сутки, руб:</b>&nbsp;".$car['1_day']."
-                                                <br />
-                                                <b>Цена за 2 суток, руб:</b>&nbsp;".$car['2_days']."
-                                                <br />
-                                                <b>Цена за 3-10 суток, руб:</b>&nbsp;".$car['3_10_days']."
-                                                <br />
-                                                <b>Цена за 10-20 суток, руб:</b>&nbsp;".$car['10_20_days']."
-                                                <br />
-                                                <b>Цена за 20-30 суток, руб:</b>&nbsp;".$car['20_30_days']."
-                                                <br /><br />
                                                 <span>* Минимальный срок аренды: ".$car['min_term']."</span>
+                                                <br /><br />
+                                                <table>
+                                                <thead class='bold td-grey'>
+                                                    <tr>
+                                                        <td>Срок</td>
+                                                        <td>Цена за 250 км/сутки, руб</td>
+                                                        <td>Цена за 500 км/сутки, руб</td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class='bold td-grey'>1 сутки</td>
+                                                        <td>".$car['1_day']."</td>
+                                                        <td>".$car['max_1_day']."</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class='bold td-grey'>2 сутки</td>
+                                                        <td>".$car['2_days']."</td>
+                                                        <td>".$car['max_2_days']."</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class='bold td-grey'>3-10 суток</td>
+                                                        <td>".$car['3_10_days']."</td>
+                                                        <td>".$car['max_3_10_days']."</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class='bold td-grey'>10-20 суток</td>
+                                                        <td>".$car['10_20_days']."</td>
+                                                        <td>".$car['max_10_20_days']."</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class='bold td-grey'>20-30 суток</td>
+                                                        <td>".$car['20_30_days']."</td>
+                                                        <td>".$car['max_20_30_days']."</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                             </div>
                                             <br /><br />
                                             <a href='/cars/".$car['url']."'><div class='promoButton transition'>Подробнее <i class='fa fa-angle-double-right' aria-hidden='true'></i></div></a>
@@ -400,17 +454,44 @@ $page = $pageResult->fetch_assoc();
                                     <br /><br />
                                     <b><i class='fa fa-money' aria-hidden='true'></i> Цена за 1 час, руб:</b>&nbsp;".$car['1_hour']."
                                     <br />
-                                    <b><i class='fa fa-money' aria-hidden='true'></i> Цена за 1 сутки, руб:</b>&nbsp;".$car['1_day']."
-                                    <br />
-                                    <b><i class='fa fa-money' aria-hidden='true'></i> Цена за 2 суток, руб:</b>&nbsp;".$car['2_days']."
-                                    <br />
-                                    <b><i class='fa fa-money' aria-hidden='true'></i> Цена за 3-10 суток, руб:</b>&nbsp;".$car['3_10_days']."
-                                    <br />
-                                    <b><i class='fa fa-money' aria-hidden='true'></i> Цена за 10-20 суток, руб:</b>&nbsp;".$car['10_20_days']."
-                                    <br />
-                                    <b><i class='fa fa-money' aria-hidden='true'></i> Цена за 20-30 суток, руб:</b>&nbsp;".$car['20_30_days']."
-                                    <br /><br />
                                     <span>* Минимальный срок аренды: ".$car['min_term']."</span>
+                                    <br /><br />
+                                    <table>
+                                        <thead class='bold td-grey'>
+                                            <tr>
+                                                <td>Срок</td>
+                                                <td>Цена с учётом пробега до 250 км/сутки, руб</td>
+                                                <td>Цена с учётом пробега до 500 км/сутки, руб</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class='bold td-grey'>1 сутки</td>
+                                                <td>".$car['1_day']."</td>
+                                                <td>".$car['max_1_day']."</td>
+                                            </tr>
+                                            <tr>
+                                                <td class='bold td-grey'>2 суток</td>
+                                                <td>".$car['2_days']."</td>
+                                                <td>".$car['max_2_days']."</td>
+                                            </tr>
+                                            <tr>
+                                                <td class='bold td-grey'>3-10 суток</td>
+                                                <td>".$car['3_10_days']."</td>
+                                                <td>".$car['max_3_10_days']."</td>
+                                            </tr>
+                                            <tr>
+                                                <td class='bold td-grey'>10-20 суток</td>
+                                                <td>".$car['10_20_days']."</td>
+                                                <td>".$car['max_10_20_days']."</td>
+                                            </tr>
+                                            <tr>
+                                                <td class='bold td-grey'>20-30 суток</td>
+                                                <td>".$car['20_30_days']."</td>
+                                                <td>".$car['max_20_30_days']."</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                     <br /><br />
                             ";
 
