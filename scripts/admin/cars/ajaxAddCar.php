@@ -87,7 +87,7 @@ if($urlCheck[0] == 0) {
                         ."', '".$photoDBName."')")) {
                         copy($photoTmpName, $photoUpload);
 
-                        resize($previewTmpName, 200);
+                        image_resize($previewTmpName, $previewUpload, 200, 100);
                         move_uploaded_file($previewTmpName, $previewUpload);
 
                         $finish++;
@@ -115,7 +115,7 @@ if($urlCheck[0] == 0) {
                 if($mysqli->query("INSERT INTO rent_cars (id, car_type, name, year, engine, consumption, transmission, body, places, description, 1_hour, 1_day, 2_days, 3_10_days, 10_20_days, 20_30_days, max_1_day, max_2_days, max_3_10_days, max_10_20_days, max_20_30_days, min_term, preview, photo, url) VALUES ('".$id."', '".$type."', '".$name."', '".$year."', '".$engine."', '".$consumption."', '".$transmission."', '".$body."', '".$places."', '".$description."', '".$hour_1."', '".$day_1."', '".$days_2."', '".$days_3_10."', '".$days_10_20."', '".$days_20_30."', '".$max_day_1."', '".$max_days_2."', '".$max_days_3_10."', '".$max_days_10_20."', '".$max_days_20_30."', '".$min_term."', '".$previewDBName."', '".$photoDBName."', '".$url."')")) {
                     copy($photoTmpName, $photoUpload);
 
-                    resize($previewTmpName, 200);
+                    image_resize($previewTmpName, $previewUpload, 200, 100);
                     move_uploaded_file($previewTmpName, $previewUpload);
 
                     echo "ok";

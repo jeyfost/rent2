@@ -72,7 +72,7 @@ if($urlCheck[0] == 0) {
 
                 copy($photoTmpName, $photoUpload);
 
-                resize($previewTmpName, 200);
+                image_resize($previewTmpName, $previewUpload, 200, 100);
                 move_uploaded_file($previewTmpName, $previewUpload);
             } else {
                 echo "photo upload";
@@ -127,7 +127,7 @@ if($urlCheck[0] == 0) {
                     ."', '".$photoDBName."')")) {
                     copy($photoTmpName, $photoUpload);
 
-                    resize($previewTmpName, 200);
+                    image_resize($previewTmpName, $previewUpload, 200, 100);
                     move_uploaded_file($previewTmpName, $previewUpload);
 
                     $finish++;
