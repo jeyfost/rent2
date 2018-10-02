@@ -172,7 +172,7 @@ if($_SESSION['userID'] != 1) {
         <br />
         <input id='1_hourInput' name='1_hour' />
         <br /><br /><hr />
-        <h3>Цена за 250 км</h3>
+        <h3>При пробеге до 250 км/сутки</h3>
         <label for='1_dayInput'>Цена за 1 день, руб.</label>
         <br />
         <input id='1_dayInput' name='1_day' />
@@ -193,7 +193,7 @@ if($_SESSION['userID'] != 1) {
         <br />
         <input id='20_30_daysInput' name='20_30_days' />
         <br /><br /><hr />
-        <h3>Цена за 500 км</h3>
+        <h3>При пробеге до 500 км/сутки</h3>
         <label for='max_1_dayInput'>Цена за 1 день, руб.</label>
         <br />
         <input id='max_1_dayInput' name='max_1_day' />
