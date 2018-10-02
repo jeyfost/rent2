@@ -237,9 +237,9 @@ $page = $pageResult->fetch_assoc();
                                             <table>
                                                 <thead class='bold td-grey'>
                                                     <tr>
-                                                        <td>Срок</td>
-                                                        <td>Цена за 250 км/сутки, руб</td>
-                                                        <td>Цена за 500 км/сутки, руб</td>
+                                                        <td>Срок аренды</td>
+                                                        <td>Цена за сутки, руб. (пробег до 300 км)</td>
+                                                        <td>Цена за сутки, руб. (пробег до 500 км)</td>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -313,9 +313,9 @@ $page = $pageResult->fetch_assoc();
                                                 <table>
                                                 <thead class='bold td-grey'>
                                                     <tr>
-                                                        <td>Срок</td>
-                                                        <td>Цена за 250 км/сутки, руб</td>
-                                                        <td>Цена за 500 км/сутки, руб</td>
+                                                        <td>Срок аренды</td>
+                                                        <td>Цена за сутки, руб. (пробег до 300 км)</td>
+                                                        <td>Цена за сутки, руб. (пробег до 500 км)</td>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -460,7 +460,7 @@ $page = $pageResult->fetch_assoc();
                                         <thead class='bold td-grey'>
                                             <tr>
                                                 <td>Срок</td>
-                                                <td>Цена с учётом пробега до 250 км/сутки, руб</td>
+                                                <td>Цена с учётом пробега до 300 км/сутки, руб</td>
                                                 <td>Цена с учётом пробега до 500 км/сутки, руб</td>
                                             </tr>
                                         </thead>

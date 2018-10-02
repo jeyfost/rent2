@@ -172,7 +172,7 @@ if($_SESSION['userID'] != 1) {
         <br />
         <input id='1_hourInput' name='1_hour' />
         <br /><br /><hr />
-        <h3>При пробеге до 250 км/сутки</h3>
+        <h3>При пробеге до 300 км/сутки</h3>
         <label for='1_dayInput'>Цена за 1 день, руб.</label>
         <br />
         <input id='1_dayInput' name='1_day' />
