@@ -13,9 +13,14 @@ $(window).on("load", function () {
     const st = parseInt($("#start").offset().top + $("#start").height());
 
     if(gc > st) {
-        console.log(11111);
         $("#start").height(parseInt($("#start").height() + parseInt(gc - st)));
     }
+
+    startContainerSize();
+});
+
+$(window).on("resize", function () {
+    startContainerSize();
 });
 
 $(window).on("scroll", function () {
@@ -73,6 +78,16 @@ function pointHover(line, text, action) {
             $("#" + text).css("color", "#333");
         } else {
             $("#" + text).css("color", "#fff");
+        }
+    }
+}
+
+function startContainerSize() {
+    if($(window).width() <= 480) {
+        if($(".promo").height() < $(window).height()) {
+            $("#start").offset({top: $(window).height()});
+        } else {
+            $("#start").offset({top: parseInt($(".menu").height() + $(".promo").height() + 100)});
         }
     }
 }

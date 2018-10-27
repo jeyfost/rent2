@@ -1,7 +1,7 @@
 <?php
     include("scripts/connect.php");
 
-    $pageResult = $mysqli->query("SELECT * FROM rent_pages WHERE url = ''");
+    $pageResult = $mysqli->query("SELECT * FROM rent_pages WHERE id = '1'");
     $page = $pageResult->fetch_assoc();
 ?>
 
